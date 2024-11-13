@@ -1,0 +1,253 @@
+/* Basic layout for the homepage */
+.home-page {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    position: relative;
+    text-align: center;
+}
+
+/* Blob styles */
+.blob {
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    opacity: 0.3;
+    z-index: -1;
+}
+
+.blob1 {
+    top: 10%;
+    left: 5%;
+    background: #ff8a80;
+}
+
+.blob2 {
+    bottom: 10%;
+    right: 5%;
+    background: #82b1ff;
+}
+
+.description {
+    font-size: 1.1em;
+    color: #666;
+    margin-bottom: 20px;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bolder;
+}
+
+/* Button container styling */
+.home-button-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+/* Button styles */
+.custom-button {
+    padding: 12px 24px;
+    font-size: 1em;
+    color: #fff;
+    background: linear-gradient(145deg, #82b1ff, #2962ff);
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: transform 0.3s, box-shadow 0.3s;
+    outline: none;
+}
+
+.custom-button:hover {
+    transform: translateY(-5px);
+    box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.1);
+}
+
+.custom-button:active {
+    transform: translateY(0);
+    box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Description under each button */
+.button-description {
+    font-size: 0.9em;
+    color: #555;
+    max-width: 250px;
+    text-align: center;
+    margin-top: -10px;
+}
+
+
+.app-container {
+    font-family: Arial, sans-serif;
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    text-align: center;
+    color: #333;
+    margin-top: 120px;
+}
+
+.header-title {
+    font-size: 2.5rem;            
+    font-weight: 700;           
+    color: #333;                   
+    text-align: center;
+    margin: 20px 0;
+    letter-spacing: 1px;           
+    text-transform: uppercase;     
+    background: linear-gradient(to right, #4A90E2, #9013FE); 
+    -webkit-background-clip: text; 
+    -webkit-text-fill-color: transparent;
+}
+
+.header-title-shadow {
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); /* Optional shadow */
+}
+
+.controls {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.list-container {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+label {
+    margin-right: 8px;
+}
+
+select, .controls select {
+    padding: 4px;
+    border-radius: 6px;
+    border: 1px solid #ddd;
+    color: #333;
+    background: linear-gradient(135deg, #FDE2C8, #FEC8C1);;
+}
+
+.list-container ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+}
+
+.list-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 10px;
+    padding: 10px;
+    margin: 6px 0;
+    background: linear-gradient(135deg, #FFF6B7, #FFEBB8);
+    border: 1px solid #FFD4D4;
+    border-radius: 8px;
+}
+
+.action-btn-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.list-info {
+    font-size: 14px;
+    color: #555;
+}
+
+.addList {
+    background: linear-gradient(135deg, #E0F7FA, #EDE7F6);
+    border: none;
+    padding: 6px;
+    cursor: pointer;
+}
+
+.edit-btn, .delete-btn, .save-btn, .cancel-btn {
+    padding: 6px 12px;
+    border-radius: 6px;
+    font-size: 12px;
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.edit-btn { background-color: #4CAF50; }
+.delete-btn { background-color: #f44336; }
+.save-btn { background-color: #008CBA; }
+.cancel-btn { background-color: #f1c40f; }
+
+.edit-input {
+    width: 60px;
+    padding: 4px 6px;
+    font-size: 14px;
+    color: #333;
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    outline: none;
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.edit-input:focus {
+    border-color: #4CAF50; 
+    box-shadow: 0 0 4px rgba(76, 175, 80, 0.3); 
+}
+
+.input-box {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+    flex-wrap: nowrap;
+}
+
+.input-field {
+    width: 100%;
+    max-width: 300px;
+    padding: 12px;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    background: linear-gradient(135deg, #f9f9f9, #ffffff);
+    font-size: 16px;
+    color: #333;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    outline: none;
+    transition: all 0.3s ease;
+}
+
+.input-field:focus {
+    border-color: #a0d8ff; /* Light blue on focus */
+    box-shadow: 0 4px 12px rgba(160, 216, 255, 0.3);
+    background: #ffffff;
+}
+
+/* Placeholder Styling */
+.input-field::placeholder {
+    color: #aaa;
+    opacity: 0.8;
+}
+
+/* Example container for input fields */
+.input-container {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    align-items: center;
+    margin: 20px;
+}
+
+.days-spent {
+    color: #4CAF50;
+    font-weight: bold;
+}
